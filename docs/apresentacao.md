@@ -13,15 +13,15 @@
 | 3 | O dataset e suas armadilhas | Paulo | 1:00 | grade de fotos |
 | 4 | Foto vira vetor | Paulo | 1:00 | `1_foto_vira_vetor` |
 | 5 | Imagem média e centralização | Paulo | 1:00 | `1_imagem_media` |
-| 6 | SVD em uma equação | Isaac | 1:30 | diagrama U Σ Vᵀ |
+| 6 | SVD, método da potência e Eckart–Young | Isaac | 1:30 | `6_eckart_young` |
 | 7 | Eigen-Pokémons | Isaac | 1:00 | `2_eigen_pokemons` |
 | 8 | "Já reconhece?" reconstrução aos poucos | Isaac | 1:30 | `2_reconstrucao` |
 | 9 | De 12.288 para 50 números | Luca | 1:00 | `3_dispersao_2d` |
 | 10 | Quantos componentes? | Luca | 1:00 | `3_acuracia_por_k` |
-| 11 | Resultados e a força da cor | Luca | 1:30 | tabela e `3_matriz_confusao` |
+| 11 | Resultados e o que o classificador "enxerga" | Luca | 1:30 | `6_w_como_imagem` |
 | 12 | Teste de estresse | Enomoto | 1:00 | `4_perturbacoes` |
 | 13 | PCA contra CNN | Enomoto | 1:30 | `4_robustez` |
-| 14 | Por que a CNN resiste mais | Enomoto | 1:30 | desenho de um filtro deslizando |
+| 14 | Redes neurais são matrizes: camadas e convolução | Enomoto | 1:30 | `6_convolucao_matriz` |
 | 15 | Onde SVD ajuda | Luigi | 1:30 | `5_ruido` |
 | 16 | Onde falhou para nós | Luigi | 1:00 | `5_anomalia` |
 | 17 | Conclusão | Luigi | 1:00 | — |

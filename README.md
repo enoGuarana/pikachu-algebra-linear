@@ -30,6 +30,14 @@ No Linux/macOS: `python3.13 -m venv .venv && source .venv/bin/activate`.
 
 O dataset é baixado automaticamente na primeira execução. Na máquina em que o projeto foi criado (CPU, 12 núcleos lógicos), tudo rodou em cerca de 7 min 30 s, a maior parte no treino da CNN.
 
+## Demo interativa
+
+```powershell
+streamlit run demo.py
+```
+
+Envie uma foto, varie o número de componentes, desloque, gire ou amplie e compare PCA com CNN. Na primeira execução a CNN é treinada e salva em `modelos/`.
+
 ## Divisão do trabalho
 
 | Etapa | Responsável | Guia | Código |
@@ -39,6 +47,8 @@ O dataset é baixado automaticamente na primeira execução. Na máquina em que 
 | 3. Classificação linear | Luca | [guia](docs/3_luca.md) | `src/etapa3_classificacao.py` |
 | 4. Limite da linearidade e CNN | Enomoto | [guia](docs/4_enomoto.md) | `src/etapa4_cnn.py` |
 | 5. Aplicações reais | Luigi | [guia](docs/5_luigi.md) | `src/etapa5_aplicacoes.py` |
+
+**Destaque:** [a Álgebra Linear do projeto](docs/algebra_linear.md), verificada numericamente em `src/etapa6_algebra.py`.
 
 Plano da apresentação: [docs/apresentacao.md](docs/apresentacao.md). Figuras e números ficam em `resultados/`.
 

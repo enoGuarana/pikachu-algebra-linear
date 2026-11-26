@@ -1,0 +1,24 @@
+{
+  "potencia_cosseno_com_svd": 0.9999999999999997,
+  "potencia_autovalor_sobre_sigma1_ao_quadrado": 0.999999999999999,
+  "gram_maior_erro_relativo_50_primeiros": 6.217248937900877e-15,
+  "pitagoras": {
+    "norma2_x": 926.316296887612,
+    "norma2_projecao": 495.2863305660305,
+    "norma2_residuo": 431.0299663215818,
+    "produto_interno_projecao_residuo": -1.5187850976872141e-13
+  },
+  "eckart_young_maior_erro_relativo": 8.881784197001252e-16,
+  "erro2_k50_svd_vs_base_aleatoria": [
+    185229.34178223473,
+    1044231.7841855133
+  ],
+  "w_como_imagem_maior_diferenca": 3.552713678800501e-15,
+  "acuracia_teste": {
+    "pca_50": 0.8106995884773662,
+    "pixels_sem_pca": 0.8024691358024691
+  },
+  "camadas_sem_ativacao_diferenca": 2.886579864025407e-15,
+  "camadas_com_relu_diferenca": 15.92640745292984,
+  "convolucao_vs_matriz_diferenca": 1.1102230246251565e-16
+}
