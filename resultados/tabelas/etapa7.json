@@ -1,0 +1,112 @@
+{
+  "fundo_preto": {
+    "treino": {
+      "pikachu": 13,
+      "nao_pikachu": 92
+    },
+    "validacao": {
+      "pikachu": 7,
+      "nao_pikachu": 19
+    },
+    "teste": {
+      "pikachu": 9,
+      "nao_pikachu": 17
+    }
+  },
+  "imagens_no_teste_sem_fundo_preto": 217,
+  "treino_completo": {
+    "teste_completo": {
+      "pca": 0.8106995884773662,
+      "cnn_media_3_sementes": 0.9067215363511659
+    },
+    "teste_sem_fundo_preto": {
+      "pca": 0.815668202764977,
+      "cnn_media_3_sementes": 0.913978494623656
+    }
+  },
+  "treino_sem_fundo_preto": {
+    "teste_completo": {
+      "pca": 0.831275720164609,
+      "cnn_media_3_sementes": 0.9094650205761318
+    },
+    "teste_sem_fundo_preto": {
+      "pca": 0.8341013824884793,
+      "cnn_media_3_sementes": 0.9170506912442397
+    }
+  },
+  "erros_no_teste": {
+    "pca": 46,
+    "cnn_semente_0": 20,
+    "ambos": 11,
+    "indices_pca": [
+      8,
+      11,
+      14,
+      29,
+      33,
+      37,
+      40,
+      44,
+      45,
+      47,
+      48,
+      55,
+      73,
+      76,
+      86,
+      87,
+      100,
+      104,
+      105,
+      106,
+      107,
+      108,
+      111,
+      124,
+      135,
+      137,
+      152,
+      162,
+      166,
+      176,
+      177,
+      179,
+      181,
+      183,
+      184,
+      185,
+      188,
+      189,
+      203,
+      206,
+      215,
+      220,
+      228,
+      229,
+      236,
+      240
+    ],
+    "indices_cnn": [
+      3,
+      19,
+      44,
+      58,
+      65,
+      68,
+      99,
+      100,
+      104,
+      152,
+      156,
+      162,
+      166,
+      176,
+      181,
+      184,
+      201,
+      203,
+      231,
+      240
+    ]
+  }
+}

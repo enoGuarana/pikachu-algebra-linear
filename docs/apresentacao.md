@@ -2,29 +2,37 @@
 
 **Título:** Isso é um Pikachu? Álgebra Linear por trás do reconhecimento de imagens
 
-**Duração:** cerca de 50 minutos; perguntas à parte. A demo ao vivo (4 min) entra no slide 12.
+**Duração:** cerca de 50 minutos; perguntas à parte. A demo ao vivo (3 min) entra no slide 13. As referências ficam na tela durante as perguntas.
 
 ## Roteiro
 
-| # | Slide | Quem | Tempo | Figura |
-|---|---|---|---|---|
-| 1 | Título e integrantes | Paulo | 1:00 | — |
-| 2 | Pergunta: até onde vai a Álgebra Linear? | Paulo | 1:00 | exemplo das duas classes |
-| 3 | O dataset e suas armadilhas | Paulo | 2:00 | grade de fotos |
-| 4 | Foto vira vetor | Paulo | 3:00 | `1_foto_vira_vetor` |
-| 5 | Imagem média e centralização | Paulo | 3:00 | `1_imagem_media` |
-| 6 | SVD, método da potência e Eckart–Young | Isaac | 4:00 | `6_eckart_young` |
-| 7 | Eigen-Pokémons | Isaac | 3:00 | `2_eigen_pokemons` |
-| 8 | "Já reconhece?" reconstrução aos poucos | Isaac | 4:00 | `2_reconstrucao` |
-| 9 | De 12.288 para 50 números | Luca | 3:00 | `3_dispersao_2d` |
-| 10 | Quantos componentes? | Luca | 2:00 | `3_acuracia_por_k` |
-| 11 | Resultados e o que o classificador "enxerga" | Luca | 4:00 | `6_w_como_imagem` |
-| 12 | Teste de estresse | Enomoto | 4:00 | `4_perturbacoes` |
-| 13 | PCA contra CNN | Enomoto | 3:00 | `4_robustez` |
-| 14 | Redes neurais são matrizes: camadas e convolução | Enomoto | 4:00 | `6_convolucao_matriz` |
-| 15 | Onde SVD ajuda | Luigi | 5:00 | `5_ruido` |
-| 16 | Onde falhou para nós | Luigi | 3:00 | `5_anomalia` |
-| 17 | Conclusão | Luigi | 1:00 | — |
+| # | Slide | Quem | Tempo |
+|---|---|---|---|
+| 1 | Título e integrantes | Paulo | 1:00 |
+| 2 | Pergunta central | Paulo | 1:00 |
+| 3 | Votação: é Pikachu? | Paulo | 1:00 |
+| 4 | O dataset | Paulo | 1:30 |
+| 5 | Foto vira vetor | Paulo | 2:30 |
+| 6 | A foto média | Paulo | 3:00 |
+| 7 | SVD e Eckart–Young | Isaac | 4:00 |
+| 8 | Eigen-Pokémons | Isaac | 3:00 |
+| 9 | Já dá para reconhecer? | Isaac | 4:00 |
+| 10 | De 12.288 para 50 números | Luca | 3:00 |
+| 11 | Quantos componentes? | Luca | 2:00 |
+| 12 | O que o classificador enxerga | Luca | 3:00 |
+| 13 | Teste de estresse e demo | Enomoto | 3:00 |
+| 14 | PCA contra CNN | Enomoto | 2:00 |
+| 15 | Resultado da votação | Luca | 1:00 |
+| 16 | Onde cada um errou | Enomoto | 1:00 |
+| 17 | Fundo preto é atalho? | Enomoto | 1:00 |
+| 18 | Redes neurais são matrizes | Enomoto | 1:00 |
+| 19 | O que a CNN aprendeu | Enomoto | 1:00 |
+| 20 | Exercício ao vivo: XOR | Enomoto | 1:30 |
+| 21 | Resposta do XOR | Enomoto | 0:30 |
+| 22 | Nosso projeto e o mercado | Luigi | 5:00 |
+| 23 | Onde falhou | Luigi | 3:00 |
+| 24 | Conclusão | Luigi | 1:00 |
+| 25 | Referências | Luigi | 0:00 |
 
 Total: 50 minutos.
 

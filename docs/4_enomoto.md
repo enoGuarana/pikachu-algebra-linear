@@ -1,7 +1,7 @@
 # Roteiro individual: Enomoto
 
 **Tema:** o limite da linearidade e a CNN
-**Tempo:** 11 minutos (30:00 a 41:00), slides 12 a 14
+**Tempo:** 11 minutos (29:00 a 41:00), slides 13, 14 e 16 a 21
 **Código:** `src/etapa4_cnn.py`, `src/etapa6_algebra.py` e `demo.py`
 **Mensagem que a turma deve levar:** o PCA compara posições fixas; a CNN procura padrões em várias posições.
 
@@ -9,17 +9,23 @@
 
 | Tempo | Slide | Assunto |
 |---|---|---|
-| 30:00–34:00 | 12 | Teste de estresse com demo ao vivo |
-| 34:00–37:00 | 13 | PCA contra CNN |
-| 37:00–41:00 | 14 | Redes neurais são matrizes, com exemplos no quadro |
+| 29:00–32:00 | 13 | Teste de estresse com demo ao vivo |
+| 32:00–34:00 | 14 | PCA contra CNN |
+| 34:00–35:00 | 15 | Votação (Luca apresenta) |
+| 35:00–36:00 | 16 | Onde cada um errou |
+| 36:00–37:00 | 17 | Fundo preto é atalho? |
+| 37:00–38:00 | 18 | Redes neurais são matrizes |
+| 38:00–39:00 | 19 | O que a CNN aprendeu |
+| 39:00–40:30 | 20 | Turma resolve o XOR no quadro |
+| 40:30–41:00 | 21 | Resposta |
 
 ## Falas sugeridas
 
-**Slide 12.** "Vamos mexer na foto: deslocar, girar e ampliar, e ver o que cada modelo responde." Rode a demo.
+**Slide 13.** "Vamos mexer na foto: deslocar, girar e ampliar, e ver o que cada modelo responde." Rode a demo.
 
-**Slide 13.** "Deslocando 16 pixels, o PCA cai para perto do acaso. A CNN perde bem menos. Rotação e zoom afetaram o PCA menos do que esperávamos."
+**Slide 14.** "Deslocando 16 pixels, o PCA cai para perto do acaso. A CNN perde bem menos. Rotação e zoom afetaram o PCA menos do que esperávamos."
 
-**Slide 14.** "Uma rede neural é uma sequência de matrizes com funções não lineares entre elas. Sem essas funções, tudo vira uma matriz só."
+**Slide 18.** "Uma rede neural é uma sequência de matrizes com funções não lineares entre elas. Sem essas funções, tudo vira uma matriz só."
 
 ## Demo ao vivo
 
@@ -70,7 +76,7 @@ Se T desloca a imagem, então conv(Tx) = T conv(x), desconsiderando as bordas. O
 ### 6. Aprendizado
 A regra da cadeia leva o erro até os pesos. Em uma camada densa, ∂L/∂W = δxᵀ, com δ = ∂L/∂(Wx + b).
 
-## Exemplos no quadro (slide 14)
+## Exemplos no quadro (slides 18 e 20)
 
 ### XOR
 f(x) = wᵀ max(0, Wx + c), com W de linhas (1, 1) e (1, 1), c = (0, −1) e w = (1, −2).
@@ -87,6 +93,14 @@ Filtro (−1, 1). No sinal (0, 0, 1, 1) a resposta é (0, 1, 0). No sinal (0, 1,
 
 ## Figuras
 `4_perturbacoes.png`, `4_robustez.png`, `6_convolucao_matriz.png`.
+
+## Erros, atalho e filtros (slides 16, 17 e 19)
+
+**Erros:** o PCA confunde objetos amarelos; os dois erram Pikachus em poses incomuns ou fundo escuro.
+
+**Fundo preto:** retirando essas imagens do teste, o PCA vai de 81,1% para 81,6% e a CNN de 90,7% para 91,4%. Retreinando sem elas, 83,4% e 91,7%. Não há sinal de acurácia inflada por esse atalho; outros não foram testados.
+
+**Filtros:** são 3 × 3 coloridos; alguns realçam bordas, outros regiões de cor.
 
 ## Cuidados
 - A CNN **não é imune** a deslocamento, rotação ou zoom.

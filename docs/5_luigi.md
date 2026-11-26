@@ -1,7 +1,7 @@
 # Roteiro individual: Luigi
 
 **Tema:** nosso projeto e aplicações reais
-**Tempo:** 9 minutos (41:00 a 50:00), slides 15 a 17
+**Tempo:** 9 minutos (41:00 a 50:00), slides 22 a 25
 **Código:** `src/etapa5_aplicacoes.py`
 **Mensagem que a turma deve levar:** SVD/PCA continua útil quando o problema combina com a ferramenta.
 
@@ -9,17 +9,18 @@
 
 | Tempo | Slide | Assunto |
 |---|---|---|
-| 41:00–46:00 | 15 | Nosso projeto (2 min) e onde o SVD ajuda (3 min) |
-| 46:00–49:00 | 16 | Onde falhou |
-| 49:00–50:00 | 17 | Conclusão |
+| 41:00–46:00 | 22 | Nosso projeto (2 min) e onde o SVD ajuda (3 min) |
+| 46:00–49:00 | 23 | Onde falhou |
+| 49:00–50:00 | 24 | Conclusão |
+| perguntas | 25 | Referências |
 
 ## Falas sugeridas
 
-**Slide 15.** "Fizemos um experimento completo: fotos viram vetores, o SVD resume, um classificador decide e comparamos com uma CNN. O linear acertou 81% e a CNN cerca de 91%. A mesma ferramenta serve para outras coisas: comprimir, limpar ruído e recomendar."
+**Slide 22.** "Fizemos um experimento completo: fotos viram vetores, o SVD resume, um classificador decide e comparamos com uma CNN. O linear acertou 81% e a CNN cerca de 91%. A mesma ferramenta serve para outras coisas: comprimir, limpar ruído e recomendar."
 
-**Slide 16.** "Tentamos detectar o que não é Pikachu pelo erro de reconstrução. Deu o mesmo que chutar. Mostramos porque saber onde não funciona faz parte do trabalho."
+**Slide 23.** "Tentamos detectar o que não é Pikachu pelo erro de reconstrução. Deu o mesmo que chutar. Mostramos porque saber onde não funciona faz parte do trabalho."
 
-**Slide 17.** "Foto é vetor, dataset é matriz, SVD encontra direções, classificar é separar com um hiperplano, e uma rede neural alterna matrizes e funções não lineares. Obrigado."
+**Slide 24.** "Foto é vetor, dataset é matriz, SVD encontra direções, classificar é separar com um hiperplano, e uma rede neural alterna matrizes e funções não lineares. Obrigado."
 
 ## O que testamos
 
@@ -56,7 +57,7 @@ Matriz de 5 usuários × 4 filmes com uma nota faltando. O SVD de posto 2, preen
 
 Formulação usual com notas faltando: minimizar Σ (Rᵢⱼ − pᵢᵀqⱼ)² nas notas conhecidas, mais uma penalidade sobre p e q.
 
-## Exemplos no quadro (slide 15)
+## Exemplos no quadro (slide 22)
 
 **Anomalia.** Com v₁ = (1, 1)/√2 do exemplo de Isaac: o ponto (2, −2) tem projeção zero e erro quadrático 8; o ponto (2, 1) tem erro 0,5.
 

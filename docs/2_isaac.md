@@ -1,7 +1,7 @@
 # Roteiro individual: Isaac
 
 **Tema:** SVD, PCA e Eigen-Pokémons
-**Tempo:** 11 minutos (10:00 a 21:00), slides 6 a 8
+**Tempo:** 11 minutos (10:00 a 21:00), slides 7 a 9
 **Código:** `src/etapa2_svd.py` e `src/etapa6_algebra.py`
 **Mensagem que a turma deve levar:** cada foto pode ser escrita como a média mais uma soma ponderada de direções ordenadas por importância.
 
@@ -9,17 +9,17 @@
 
 | Tempo | Slide | Assunto |
 |---|---|---|
-| 10:00–14:00 | 6 | SVD, método da potência e Eckart–Young, com exemplo no quadro |
-| 14:00–17:00 | 7 | Eigen-Pokémons |
-| 17:00–21:00 | 8 | Reconstrução |
+| 10:00–14:00 | 7 | SVD, método da potência e Eckart–Young, com exemplo no quadro |
+| 14:00–17:00 | 8 | Eigen-Pokémons |
+| 17:00–21:00 | 9 | Reconstrução |
 
 ## Falas sugeridas
 
-**Slide 6.** "Queremos a direção em que as fotos mais variam, depois a segunda, perpendicular à primeira, e assim por diante. O SVD entrega todas de uma vez."
+**Slide 7.** "Queremos a direção em que as fotos mais variam, depois a segunda, perpendicular à primeira, e assim por diante. O SVD entrega todas de uma vez."
 
-**Slide 7.** "Cada direção tem 12.288 números, então podemos desenhá-la. As primeiras são manchas de cor e silhueta; não aparecem orelhas nítidas, porque as fotos variam muito. As de número alto parecem ruído."
+**Slide 8.** "Cada direção tem 12.288 números, então podemos desenhá-la. As primeiras são manchas de cor e silhueta; não aparecem orelhas nítidas, porque as fotos variam muito. As de número alto parecem ruído."
 
-**Slide 8.** "Com 5 componentes, um borrão amarelo. Com 200, já dá para reconhecer. A foto de treino volta perfeita com todos os componentes. A de teste não, porque ela não foi usada para construir as direções."
+**Slide 9.** "Com 5 componentes, um borrão amarelo. Com 200, já dá para reconhecer. A foto de treino volta perfeita com todos os componentes. A de teste não, porque ela não foi usada para construir as direções."
 
 ## A matemática, passo a passo
 
@@ -57,7 +57,7 @@ Comece com v qualquer e repita v ← Cv/‖Cv‖. Escrevendo v na base de autove
 ### 7. Atalho de cálculo
 XcXcᵀ é 774 × 774, bem menor que 12.288 × 12.288, e tem os mesmos autovalores não nulos. Se XcXcᵀu = σ²u com σ > 0, então v = Xcᵀu/σ.
 
-## Exemplo no quadro (slide 6)
+## Exemplo no quadro (slide 7)
 
 Quatro pontos já centralizados: (2, 1), (1, 2), (−2, −1), (−1, −2).
 

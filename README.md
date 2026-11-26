@@ -50,6 +50,8 @@ Envie uma foto, varie o número de componentes, desloque, gire ou amplie e compa
 
 **Destaque:** [a Álgebra Linear do projeto](docs/algebra_linear.md), verificada numericamente em `src/etapa6_algebra.py`.
 
+Erros, teste do atalho do fundo preto e filtros da CNN: `src/etapa7_erros.py`.
+
 Plano da apresentação: [docs/apresentacao.md](docs/apresentacao.md). Figuras e números ficam em `resultados/`.
 
 ## Dataset
