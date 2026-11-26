@@ -52,6 +52,8 @@ Envie uma foto, varie o número de componentes, desloque, gire ou amplie e compa
 
 Erros, teste do atalho do fundo preto e filtros da CNN: `src/etapa7_erros.py`.
 
+Slides: [slides/seminario_pikachu.pptx](slides/seminario_pikachu.pptx).
+
 Plano da apresentação: [docs/apresentacao.md](docs/apresentacao.md). Figuras e números ficam em `resultados/`.
 
 ## Dataset
