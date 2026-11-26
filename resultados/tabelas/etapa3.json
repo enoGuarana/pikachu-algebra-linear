@@ -1,0 +1,30 @@
+{
+  "Regressão Logística, cinza": {
+    "k": 2,
+    "C": 0.001,
+    "validacao": 0.6970954356846473,
+    "teste": 0.720164609053498
+  },
+  "SVM linear, cinza": {
+    "k": 2,
+    "C": 0.001,
+    "validacao": 0.6970954356846473,
+    "teste": 0.7160493827160493
+  },
+  "Regressão Logística, colorido": {
+    "k": 50,
+    "C": 0.01,
+    "validacao": 0.8174273858921162,
+    "teste": 0.8106995884773662
+  },
+  "SVM linear, colorido": {
+    "k": 50,
+    "C": 0.001,
+    "validacao": 0.8298755186721992,
+    "teste": 0.8148148148148148
+  },
+  "Linha de base: cor média (3 números)": {
+    "validacao": 0.7302904564315352,
+    "teste": 0.6872427983539094
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variancia_com_k=1": 0.4631,
+  "variancia_com_k=5": 0.6077,
+  "variancia_com_k=20": 0.7426,
+  "variancia_com_k=50": 0.8233,
+  "variancia_com_k=100": 0.8808,
+  "variancia_com_k=200": 0.9337,
+  "k_para_90_por_cento": 128,
+  "k_para_95_por_cento": 254,
+  "erro_ortonormalidade_VtV_menos_I": 2.384185791015625e-07
+}

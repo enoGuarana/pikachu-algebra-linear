@@ -1,0 +1,32 @@
+{
+  "compressao": {
+    "k=20": {
+      "fator_para_o_treino": 34.8,
+      "erro_medio_por_pixel_no_teste": 0.1791
+    },
+    "k=50": {
+      "fator_para_o_treino": 14.3,
+      "erro_medio_por_pixel_no_teste": 0.1576
+    },
+    "k=200": {
+      "fator_para_o_treino": 3.6,
+      "erro_medio_por_pixel_no_teste": 0.128
+    }
+  },
+  "ruido": {
+    "k": 400,
+    "erro_quadratico_com_ruido": 0.039979808032512665,
+    "erro_quadratico_apos_projecao": 0.014459382742643356
+  },
+  "anomalia": {
+    "k": 5,
+    "auc_no_teste": 0.5073260073260073,
+    "acuracia_no_teste": 0.5308641975308642
+  },
+  "inferencia_pca_k50_ms_por_imagem": 0.108,
+  "recomendacao_exemplo_didatico": {
+    "usuario": 5,
+    "filme": "Ação 2",
+    "nota_prevista": 4.96
+  }
+}

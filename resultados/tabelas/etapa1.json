@@ -1,0 +1,21 @@
+{
+  "imagens_por_divisao": {
+    "train": 774,
+    "validation": 241,
+    "test": 243
+  },
+  "pikachu_por_divisao": {
+    "train": 387,
+    "validation": 126,
+    "test": 126
+  },
+  "matriz_X_cinza": [
+    774,
+    4096
+  ],
+  "matriz_X_colorida": [
+    774,
+    12288
+  ],
+  "maior_media_de_coluna_apos_centralizar": 2.1550081328314263e-06
+}
