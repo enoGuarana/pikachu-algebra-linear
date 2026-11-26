@@ -23,7 +23,7 @@
     "auc_no_teste": 0.5073260073260073,
     "acuracia_no_teste": 0.5308641975308642
   },
-  "inferencia_pca_k50_ms_por_imagem": 0.108,
+  "inferencia_pca_k50_ms_por_imagem": 0.114,
   "recomendacao_exemplo_didatico": {
     "usuario": 5,
     "filme": "Ação 2",

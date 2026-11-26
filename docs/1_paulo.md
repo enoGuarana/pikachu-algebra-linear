@@ -1,23 +1,97 @@
-# Etapa 1: Imagens como vetores e matrizes (Paulo)
+# Roteiro individual: Paulo
 
-**Mensagem:** para o computador, uma foto é uma lista de números, e o dataset inteiro é uma matriz.
+**Tema:** imagens como vetores e matrizes
+**Tempo:** 10 minutos (0:00 a 10:00), slides 1 a 5
+**Código:** `src/etapa1_vetorizacao.py`
+**Mensagem que a turma deve levar:** para o computador, uma foto é um vetor e o dataset é uma matriz.
 
-## A ideia
-- Uma foto 64 x 64 em cinza tem 4.096 pixels, então vira um vetor em ℝ⁴⁰⁹⁶.
-- Colorida, há 3 valores por pixel (vermelho, verde, azul): ℝ¹²²⁸⁸.
-- Empilhando as 774 fotos de treino: X é 774 x 4096 (cinza) ou 774 x 12288 (cor).
-- Centralização: μ = (1/n) Σ xᵢ e Xc = X − μ. A nuvem de pontos passa a ter centro na origem.
+## Minuto a minuto
 
-## Por que centralizar
-Sem subtrair a média, a primeira direção encontrada pelo SVD tende a apontar para a própria média, e não para a direção em que as fotos mais variam.
+| Tempo | Slide | Assunto |
+|---|---|---|
+| 0:00–1:00 | 1 | Título, grupo e divisão das falas |
+| 1:00–2:00 | 2 | A pergunta central |
+| 2:00–4:00 | 3 | Dataset e armadilhas |
+| 4:00–7:00 | 4 | Foto vira vetor |
+| 7:00–10:00 | 5 | Imagem média e centralização |
 
-## O que mostrar
-- `resultados/figuras/1_foto_vira_vetor.png`: a foto, o zoom nos pixels e o vetor.
-- `resultados/figuras/1_imagem_media.png`: o Pikachu médio é um borrão **amarelo**; o não Pikachu médio é acinzentado. Isso antecipa a importância da cor.
+## Falas sugeridas
 
-## Cuidado
-A média é calculada **só com o treino** e reaproveitada na validação e no teste.
+**Slide 1.** "Somos Paulo, Isaac, Luca, Enomoto e Luigi. Vamos mostrar como a Álgebra Linear ajuda um computador a reconhecer um Pikachu, e onde ela deixa de ser suficiente."
+
+**Slide 2.** Mostre a reconstrução (`2_reconstrucao.png`) aos poucos. "Levantem a mão quando reconhecerem." Depois: "A pergunta do trabalho é: até onde dá para reconhecer um Pikachu usando Álgebra Linear?"
+
+**Slide 3.** "Usamos um dataset do Kaggle com 1.290 imagens, metade Pikachu e metade não. Há bananas, flores amarelas, cães, outros Pokémon e até fantasias de Pikachu. Encontramos imagens quase repetidas entre treino e teste e as retiramos da avaliação, senão o resultado ficaria inflado."
+
+| Divisão | Imagens | Pikachu | Para que serve |
+|---|---|---|---|
+| Treino | 774 | 387 | Aprender |
+| Validação | 241 | 126 | Escolher ajustes |
+| Teste | 243 | 126 | Medir o resultado |
+
+**Slide 4.** "Cada foto foi reduzida para 64 × 64. Cada pixel tem vermelho, verde e azul. São 64 × 64 × 3 = 12.288 números. Se colocarmos em fila, temos um vetor. Empilhando as 774 fotos de treino, temos uma matriz 774 × 12.288."
+
+**Slide 5.** "A foto média é um borrão. O Pikachu médio é amarelado e o não Pikachu médio é acinzentado. Subtraindo a média, sobra o que cada foto tem de diferente."
+
+## A matemática, passo a passo
+
+### 1. Imagem como vetor
+Uma imagem colorida é um arranjo 64 × 64 × 3. Achatar é escolher uma ordem fixa para os valores:
+
+x ∈ ℝ¹²²⁸⁸, com cada entrada entre 0 e 1 (valor do pixel dividido por 255).
+
+Em cinza, cada pixel vira 0,299 R + 0,587 G + 0,114 B, e o vetor tem 4.096 entradas. Essa conta é um **produto interno** entre (R, G, B) e um vetor de pesos.
+
+### 2. Matriz de dados
+X tem uma foto por linha. A linha i é xᵢᵀ; a coluna j reúne o valor da posição j em todas as fotos.
+
+### 3. Distância entre fotos
+‖a − b‖² = ‖a‖² + ‖b‖² − 2 aᵀb
+
+### 4. Média e centralização
+μ = (1/n) Σ xᵢ e Xc = X − 1μᵀ, onde 1 é o vetor de uns.
+
+Em forma de matriz: Xc = HX, com H = I − (1/n) 11ᵀ.
+
+H é simétrica e H² = H, ou seja, é uma **projeção ortogonal**. Aplicar duas vezes não muda mais nada.
+
+### 5. Posto
+As linhas de Xc somam o vetor zero, logo são linearmente dependentes. O posto é no máximo n − 1 = 773. Mesmo com 12.288 colunas, as fotos de treino centralizadas ocupam um subespaço de no máximo 773 dimensões.
+
+## Exemplo no quadro (cerca de 2 minutos, dentro do slide 5)
+
+Duas "fotos" 2 × 2: A com linhas (8, 6) e (4, 2); B com linhas (2, 4) e (6, 8).
+
+1. Vetorizar: a = (8, 6, 4, 2) e b = (2, 4, 6, 8).
+2. Média: μ = (5, 5, 5, 5).
+3. Centralizar: a − μ = (3, 1, −1, −3) e b − μ = (−3, −1, 1, 3).
+4. Observar: as linhas somam zero e uma é o oposto da outra. O posto é 1 = n − 1.
+5. Distância: ‖a − b‖² = 36 + 4 + 4 + 36 = 80.
+
+## Figuras
+- `1_foto_vira_vetor.png`: foto, versão cinza, zoom nos pixels e o vetor (em cinza, 4.096 números).
+- `1_imagem_media.png`: média geral, Pikachu médio, não Pikachu médio e uma foto menos a média.
+
+## Cuidados
+- A média é calculada **só com o treino** e reaproveitada na validação e no teste.
+- Redimensionar para um quadrado distorce algumas fotos.
 
 ## Perguntas prováveis
-- *Achatar não perde a noção de vizinhança?* Os valores continuam todos lá, mas o método não sabe quais posições eram vizinhas. A etapa 4 mostra a consequência.
-- *Por que 64 x 64?* Mantém o cálculo leve. As fotos foram redimensionadas para um quadrado, o que distorce as proporções de algumas.
+
+**Achatar não destrói a imagem?** Não se perde valor algum além da redução para 64 × 64, e dá para desfazer. O que o método ignora é quais posições são vizinhas.
+
+**Por que 64 × 64?** Para o cálculo rodar em um computador comum.
+
+**Por que dividir por 255?** Para os valores ficarem entre 0 e 1.
+
+**Como acharam as repetidas?** Com um resumo de 64 bits de cada imagem (hash perceptual). Imagens com até 3 bits diferentes foram consideradas quase iguais.
+
+**As classes são equilibradas?** No treino, exatamente. No teste, 126 contra 117: chutar sempre "Pikachu" daria 51,9%.
+
+## Passagem para Isaac
+"São 12.288 números por foto. Será que precisamos de todos?"
+
+## Antes do dia
+- [ ] Rodar `python src/etapa1_vetorizacao.py` e abrir as figuras.
+- [ ] Fazer o exemplo do quadro sem consultar.
+- [ ] Ensaiar com cronômetro.
